@@ -1,0 +1,24 @@
+/* Colour scheme */
+:root {
+  --rich-black-fogra-29: #01161eff;
+  --alice-blue: #ebf2fa;
+  --rhythm: #7a6f9bff;
+  --cafe-au-lait: #a98467ff;
+  --umber: #6c584cff;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 50px;
+  background-color: var(--umber);
+}
+
+a {
+  color: #00b7ff;
+}
+h1 {
+  color: var(--alice-blue);
+}
+p {
+  color: var(--rich-black-fogra-29);
+}
