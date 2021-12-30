@@ -22,3 +22,20 @@ h1 {
 p {
   color: var(--rich-black-fogra-29);
 }
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  border: 1px solid var(--rhythm);
+}
+
+table th {
+  padding: 1rem;
+  border: 2px solid var(--rhythm);
+}
+
+table td {
+  padding: 0.5rem;
+  border: 1px solid var(--rhythm);
+  text-align: center;
+}
