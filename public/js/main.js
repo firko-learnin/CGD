@@ -58,5 +58,8 @@ async function updateTableData(data) {
     let beantitle = document.createElement("td");
     beantitle.innerHTML = data[i].beantitle;
     allApiData.appendChild(beantitle);
+    //Update machine
+    let machine = document.createElement("td");
+    machine.innerHTML = data[i].machine;
   }
 }

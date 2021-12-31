@@ -27,4 +27,10 @@ router.get("/", async function (req, res, next) {
 //   }
 // });
 
+//Add additional columns to table
+// router.get("/test", async function (req, res, next) {
+//   let response = await query("ALTER TABLE recipes ADD COLUMN machines TEXT");
+//   res.json({ success: true, payload: response });
+// });
+
 export default router;

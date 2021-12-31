@@ -25,7 +25,8 @@ p {
 }
 
 table {
-  width: 80%;
+  margin: auto;
+  width: 80vw;
   border-collapse: collapse;
   border: 1px solid var(--rhythm);
 }
@@ -59,4 +60,15 @@ table td {
 
 .navbar--links a {
   align-self: center;
+  color: var(--rich-black-fogra-29);
+}
+.navbar--links span {
+  align-self: center;
+  font-size: 2rem;
+}
+.navbar--links img {
+  height: 2rem;
+}
+#active {
+  color: var(--umber);
 }
