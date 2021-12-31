@@ -6,19 +6,17 @@
   --cafe-au-lait: #a98467ff;
   --umber: #6c584cff;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: 1vw;
   padding: 0;
-  background-color: var(--umber);
+  background-color: var(--alice-blue);
 }
 
-a {
-  color: #00b7ff;
-}
 h1 {
-  color: var(--alice-blue);
+  color: var(--umber);
 }
 p {
   color: var(--rich-black-fogra-29);
@@ -61,6 +59,7 @@ table td {
 .navbar--links a {
   align-self: center;
   color: var(--rich-black-fogra-29);
+  font-size: 2rem;
 }
 .navbar--links span {
   align-self: center;
@@ -71,4 +70,16 @@ table td {
 }
 #active {
   color: var(--umber);
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+#logo {
+  margin: 1vw;
+  height: 10rem;
+  border-radius: 50%;
+}
+.top h1 {
+  align-self: center;
 }
