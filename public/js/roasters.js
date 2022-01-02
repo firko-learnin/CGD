@@ -1,7 +1,7 @@
 //Set url to current site
 const url = "";
 //Assign table to a variable
-const grindData = document.getElementById("grinderTable");
+const roastData = document.getElementById("roasterTable");
 const searchArea = document.getElementById("searchArea");
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", handleClick);
@@ -19,8 +19,8 @@ async function handleClick() {
 //Function to get all data from the database
 async function getData() {
   let input = searchBox.value;
-  grindData.innerHTML = "";
-  const response = await fetch(`${url}/api/grinders?q=${input}`, {
+  roastData.innerHTML = "";
+  const response = await fetch(`${url}/api/roasters?q=${input}`, {
     method: "GET",
     headers: { "Content-Type": "application/json" },
   });
@@ -36,15 +36,15 @@ async function updateTableData(data) {
   console.log(data);
   if (data.length === 0) {
     console.log("no data");
-    grindData.style.textAlign = "center";
-    grindData.style.color = "red";
-    grindData.innerHTML = "No results found";
-    grindData.style.visibility = "visible";
+    roastData.style.textAlign = "center";
+    roastData.style.color = "red";
+    roastData.innerHTML = "No results found";
+    roastData.style.visibility = "visible";
     return;
   }
 
   //Create table headers
-  grindData.innerHTML =
+  roastData.innerHTML =
     "<th>Username</th><th>Roaster</th><th>Bean Title</th><th>Drink</th><th>Machine</th><th>Grinder</th><th>Grind Setting</th><th>Pre-infusion Time (s)</th><th>Extraction Time (s)</th><th>Tasting Notes</th>";
 
   //Loop through each item in the data array (rows)
@@ -104,9 +104,9 @@ async function updateTableData(data) {
     newRow.appendChild(tastingnotes);
 
     //Add new row to table
-    grindData.appendChild(newRow);
+    roastData.appendChild(newRow);
   }
   //Set table to visisble
-  grindData.style.visibility = "visible";
-  grindData.style.color = "";
+  roastData.style.visibility = "visible";
+  roastData.style.color = "";
 }

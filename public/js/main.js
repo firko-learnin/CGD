@@ -20,46 +20,51 @@ getData();
 
 //Function to update table with data from a GET request
 async function updateTableData(data) {
+  console.log(data);
   //Loop through each item in the data array (rows)
   for (let i = 0; i < data.length; i++) {
+    //Create a new row in the table
+    let newRow = document.createElement("tr");
     //Update username
     let username = document.createElement("td");
     username.innerHTML = data[i].username;
-    allApiData.appendChild(username);
+    newRow.appendChild(username);
     //Update drink name
     let drink = document.createElement("td");
     drink.innerHTML = data[i].drink;
-    allApiData.appendChild(drink);
+    newRow.appendChild(drink);
     //Update grinder
     let grinder = document.createElement("td");
     grinder.innerHTML = data[i].grinder;
-    allApiData.appendChild(grinder);
+    newRow.appendChild(grinder);
     //Update grind setting
     let grindsetting = document.createElement("td");
     grindsetting.innerHTML = data[i].grindsetting;
-    allApiData.appendChild(grindsetting);
+    newRow.appendChild(grindsetting);
     //Update pre-infusion time
     let preinfusiontime = document.createElement("td");
     preinfusiontime.innerHTML = data[i].preinfusiontime;
-    allApiData.appendChild(preinfusiontime);
+    newRow.appendChild(preinfusiontime);
     //Update extraction time
     let extractiontime = document.createElement("td");
     extractiontime.innerHTML = data[i].extractiontime;
-    allApiData.appendChild(extractiontime);
+    newRow.appendChild(extractiontime);
     //Update tasting notes
     let tastingnotes = document.createElement("td");
     tastingnotes.innerHTML = data[i].tastingnotes;
-    allApiData.appendChild(tastingnotes);
+    newRow.appendChild(tastingnotes);
     //Update roaster
     let roaster = document.createElement("td");
     roaster.innerHTML = data[i].roaster;
-    allApiData.appendChild(roaster);
+    newRow.appendChild(roaster);
     //Update bean title
     let beantitle = document.createElement("td");
     beantitle.innerHTML = data[i].beantitle;
-    allApiData.appendChild(beantitle);
+    newRow.appendChild(beantitle);
     //Update machine
     let machine = document.createElement("td");
     machine.innerHTML = data[i].machine;
+
+    allApiData.appendChild(newRow);
   }
 }
