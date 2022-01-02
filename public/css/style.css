@@ -1,4 +1,4 @@
-/* Colour scheme */
+/* Colour scheme, default font and border-box */
 :root {
   --rich-black-fogra-29: #01161eff;
   --alice-blue: #ebf2fa;
@@ -8,11 +8,14 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+/* Remove link decoration  */
 a {
   text-decoration: none;
 }
-
+/* Set default margin/padding and background */
 body {
   margin: 2%;
   padding: 2%;
@@ -25,7 +28,7 @@ h1 {
 p {
   color: var(--rich-black-fogra-29);
 }
-
+/* Table styling */
 table {
   margin: auto;
   width: 80vw;
@@ -43,14 +46,14 @@ table td {
   border: 1px solid var(--rhythm);
   text-align: center;
 }
-
+/* Navbar styling */
 .navbar {
   background-color: var(--alice-blue);
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 5%;
+  height: 7%;
   overflow: hidden;
 }
 
@@ -80,9 +83,13 @@ table td {
 #active {
   color: var(--umber);
 }
+/* Header and logo styling */
 .top {
   display: flex;
   justify-content: space-between;
+  font-size: 1.5rem;
+  overflow: hidden;
+  width: 90%;
 }
 #logo {
   margin: 1vw;
@@ -91,4 +98,31 @@ table td {
 }
 .top h1 {
   align-self: center;
+}
+
+/* Homepage links */
+.links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  text-decoration: none;
+}
+
+.links a {
+  color: var(--umber);
+  font-size: 1.5rem;
+}
+
+.links img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  padding: 3rem;
+}
+
+p {
+  text-align: center;
 }

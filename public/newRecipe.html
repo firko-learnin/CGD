@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>CGD - Coffee Grind Databse</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="top">
+      <img
+        id="logo"
+        src="./images/adi-goldstein-xKS-1DP4g7A-unsplash.jpg"
+        alt="a cup of espresso"
+      />
+      <h1>Coffee Grind Database</h1>
+      <div></div>
+    </div>
+    <p>Welcome to the future of espresso 🔮</p>
+    <table id="allApiData">
+      <th>Username</th>
+      <th>Drink</th>
+      <th>Grinder</th>
+      <th>Grind Setting</th>
+      <th>Pre-infusion Time (s)</th>
+      <th>Extraction Time (s)</th>
+      <th>Tasting Notes</th>
+      <th>Roaster</th>
+      <th>Bean Title</th>
+    </table>
+    <div class="links">
+      <div>
+        <a href="#grinders">
+          <h2>Grinders</h2>
+          <img src="./images/grinders.jpg" alt="coffee grinder" />
+        </a>
+        <a href="#newrecipe">
+          <h2>New Recipe</h2>
+          <img src="./images/menu.jpg" alt="coffee menu" />
+        </a>
+      </div>
+      <div>
+        <a href="#machines">
+          <h2>Machines</h2>
+          <img src="./images/machines.jpg" alt="espresso machine" />
+        </a>
+        <a href="#roasters">
+          <h2>Roasters</h2>
+          <img src="./images/roasters.jpg" alt="coffee roasting machine" />
+        </a>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="navbar--links">
+        <a href="./index.html" id="active"
+          ><span class="material-icons-outlined"> cottage </span></a
+        >
+        <a href="./grinders.html">
+          <img
+            src="./images/coffee-grinder-svgrepo-com.svg"
+            alt="coffee grinders"
+        /></a>
+        <a href="#newrecipe">
+          <img
+            id="newrecipe"
+            src="./images/addRecipe.svg"
+            alt="add recipe button"
+          />
+        </a>
+        <a href="#machines">
+          <span class="material-icons-outlined"> coffee_maker </span></a
+        >
+        <a href="#roasters"
+          ><span class="material-icons-outlined"> storefront </span></a
+        >
+      </div>
+    </nav>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
