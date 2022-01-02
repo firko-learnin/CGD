@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>CGD - Coffee Grind Database</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top">
+      <img id="logo" src="./images/grinders.jpg" alt="coffee grinder" />
+      <h1>Coffee Grind Database</h1>
+      <div></div>
+    </div>
+    <div class="searchArea">
+      <p>All data:</p>
+    </div>
+    <table id="grinderTable"></table>
+
+    <nav class="navbar">
+      <div class="navbar--links">
+        <a href="./index.html"
+          ><span class="material-icons-outlined"> cottage </span></a
+        >
+        <a href="./grinders.html" id="active">
+          <img src="./images/grinder-active.svg" alt="coffee grinders"
+        /></a>
+        <a href="./newRecipe.html">
+          <img
+            id="newrecipe"
+            src="./images/addRecipe.svg"
+            alt="add recipe button"
+          />
+        </a>
+        <a href="./machines.html">
+          <span class="material-icons-outlined"> coffee_maker </span></a
+        >
+        <a href="./roasters.html"
+          ><span class="material-icons-outlined"> storefront </span></a
+        >
+      </div>
+    </nav>
+    <script src="./js/management.js"></script>
+  </body>
+</html>

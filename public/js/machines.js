@@ -106,7 +106,7 @@ async function updateTableData(data) {
     //Add new row to table
     machineData.appendChild(newRow);
   }
-  //Set table to visisble
+  //Set table to visible
   machineData.style.visibility = "visible";
   machineData.style.color = "";
 }

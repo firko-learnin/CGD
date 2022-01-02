@@ -106,7 +106,7 @@ async function updateTableData(data) {
     //Add new row to table
     grindData.appendChild(newRow);
   }
-  //Set table to visisble
+  //Set table to visible
   grindData.style.visibility = "visible";
   grindData.style.color = "";
 }

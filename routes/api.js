@@ -107,8 +107,17 @@ router.post("/submit", async function (req, res, next) {
   }
 });
 
+//Redirect GET after submitting new recipes
 router.get("/submit", async function (req, res, next) {
   app.use(express.static(path.join(__dirname, "public")));
+});
+
+//DELETE recipes
+router.delete("/:id", async function (req, res, next) {
+  let id = req.params.id;
+  console.log(id);
+  const response = await query("DELETE FROM recipes WHERE id = $1", [id]);
+  res.json({ success: true, message: "Successfully deleted id " + id });
 });
 
 // Test adding data to the table - ok

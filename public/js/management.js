@@ -1,16 +1,8 @@
 //Set url to current site
 const url = "";
 //Assign table to a variable
-const roastData = document.getElementById("roasterTable");
+const grindData = document.getElementById("grinderTable");
 const searchArea = document.getElementById("searchArea");
-const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click", handleClick);
-const searchBox = document.getElementById("searchBox");
-searchBox.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    getData();
-  }
-});
 
 async function handleClick() {
   getData();
@@ -18,9 +10,8 @@ async function handleClick() {
 
 //Function to get all data from the database
 async function getData() {
-  let input = searchBox.value;
-  roastData.innerHTML = "";
-  const response = await fetch(`${url}/api/roasters?q=${input}`, {
+  grindData.innerHTML = "";
+  const response = await fetch(`${url}/api/`, {
     method: "GET",
     headers: { "Content-Type": "application/json" },
   });
@@ -36,20 +27,19 @@ async function updateTableData(data) {
   console.log(data);
   if (data.length === 0) {
     console.log("no data");
-    roastData.style.textAlign = "center";
-    roastData.style.color = "red";
-    roastData.innerHTML = "No results found";
-    roastData.style.visibility = "visible";
+    grindData.style.textAlign = "center";
+    grindData.style.color = "red";
+    grindData.innerHTML = "No results found";
+    grindData.style.visibility = "visible";
     return;
   }
 
   //Create table headers
-  roastData.innerHTML =
-    "<th>Username</th><th>Roaster</th><th>Bean Title</th><th>Drink</th><th>Machine</th><th>Grinder</th><th>Grind Setting</th><th>Pre-infusion Time (s)</th><th>Extraction Time (s)</th><th>Tasting Notes</th>";
+  grindData.innerHTML =
+    "<th>Username</th><th>Roaster</th><th>Bean Title</th><th>Drink</th><th>Machine</th><th>Grinder</th><th>Grind Setting</th><th>Pre-infusion Time (s)</th><th>Extraction Time (s)</th><th>Tasting Notes</th><th>Delete</th>";
 
   //Loop through each item in the data array (rows)
   for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
     //Create a new row
     let newRow = document.createElement("tr");
 
@@ -103,10 +93,34 @@ async function updateTableData(data) {
     tastingnotes.innerHTML = data[i].tastingnotes;
     newRow.appendChild(tastingnotes);
 
+    //Add delete button
+    let deleteButton = document.createElement("td");
+    deleteButton.innerHTML =
+      "<span class='material-icons-outlined' style='color:red'>remove_circle_outline</span>";
+    deleteButton.value = data[i].id;
+    deleteButton.addEventListener("click", async function deleteFunction() {
+      let idno = deleteButton.value;
+      console.log(idno);
+      const response = await fetch(`${url}/api/${idno}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      });
+      let data = await response.json();
+      alert("Successfully deleted id " + idno);
+      location.reload();
+    });
+    newRow.appendChild(deleteButton);
+
     //Add new row to table
-    roastData.appendChild(newRow);
+    grindData.appendChild(newRow);
   }
   //Set table to visible
-  roastData.style.visibility = "visible";
-  roastData.style.color = "";
+  grindData.style.visibility = "visible";
+  grindData.style.color = "";
 }
+
+async function deleteRow(id) {
+  console.log(id);
+}
+
+getData();
