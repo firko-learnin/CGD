@@ -21,6 +21,7 @@ body {
   padding: 2%;
   background-color: var(--alice-blue);
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 p {
@@ -38,13 +39,13 @@ table {
   margin: auto;
   width: 80vw;
   border-collapse: collapse;
-  border: 1px solid var(--rhythm);
 }
 
 table th {
   padding: 1rem;
   border: 2px solid var(--rhythm);
   text-align: center;
+  width: 10%;
 }
 
 table td {
@@ -52,6 +53,7 @@ table td {
   border: 1px solid var(--rhythm);
   text-align: center;
 }
+
 /* Navbar styling */
 .navbar {
   background-color: var(--alice-blue);
@@ -79,6 +81,11 @@ table td {
   align-self: center;
   font-size: 2rem;
 }
+
+.navbar--links svg {
+  align-self: center;
+  font-size: 2rem;
+}
 .navbar--links img {
   height: 2rem;
 }
@@ -88,6 +95,8 @@ table td {
 }
 #active {
   color: var(--umber);
+  stroke: var(--umber);
+  fill: var(--umber);
 }
 /* Header and logo styling */
 .top {

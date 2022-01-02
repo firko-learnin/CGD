@@ -25,54 +25,26 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div class="top">
-      <img
-        id="logo"
-        src="./images/adi-goldstein-xKS-1DP4g7A-unsplash.jpg"
-        alt="a cup of espresso"
-      />
+      <img id="logo" src="./images/grinders.jpg" alt="coffee grinder" />
       <h1>Coffee Grind Database</h1>
       <div></div>
     </div>
-    <p>Welcome to the future of espresso 🔮</p>
-    <table id="allApiData">
-      <th>Username</th>
-      <th>Drink</th>
-      <th>Grinder</th>
-      <th>Grind Setting</th>
-      <th>Pre-infusion Time (s)</th>
-      <th>Extraction Time (s)</th>
-      <th>Tasting Notes</th>
-      <th>Roaster</th>
-      <th>Bean Title</th>
-    </table>
-    <div class="links">
-      <div>
-        <a href="#grinders">
-          <h2>Grinders</h2>
-          <img src="./images/grinders.jpg" alt="coffee grinder" />
-        </a>
-        <a href="#newrecipe">
-          <h2>New Recipe</h2>
-          <img src="./images/menu.jpg" alt="coffee menu" />
-        </a>
-      </div>
-      <div>
-        <a href="#machines">
-          <h2>Machines</h2>
-          <img src="./images/machines.jpg" alt="espresso machine" />
-        </a>
-        <a href="#roasters">
-          <h2>Roasters</h2>
-          <img src="./images/roasters.jpg" alt="coffee roasting machine" />
-        </a>
+    <div class="searchArea">
+      <p>Search recipes by grinder:</p>
+      <div id="searchArea">
+        <input type="text" id="searchBox" />
+        <button id="searchButton">
+          <span class="material-icons-outlined"> search </span>
+        </button>
       </div>
     </div>
+    <table id="grinderTable"></table>
+
     <nav class="navbar">
       <div class="navbar--links">
-        <a href="./index.html" id="active"
+        <a href="./index.html"
           ><span class="material-icons-outlined"> cottage </span></a
         >
         <a href="./grinders.html">
@@ -87,14 +59,14 @@
             alt="add recipe button"
           />
         </a>
-        <a href="#machines">
+        <a href="./machines.html">
           <span class="material-icons-outlined"> coffee_maker </span></a
         >
-        <a href="#roasters"
+        <a href="./roasters.html" id="active"
           ><span class="material-icons-outlined"> storefront </span></a
         >
       </div>
     </nav>
-    <script src="./js/main.js"></script>
+    <script src="./js/grinders.js"></script>
   </body>
 </html>
