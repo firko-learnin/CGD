@@ -134,9 +134,14 @@ table td {
   visibility: hidden;
 }
 /* Search box/button */
+.searchArea {
+  width: 100%;
+}
 #searchArea {
   display: flex;
   justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 3%;
 }
 
 #searchButton {
@@ -145,8 +150,16 @@ table td {
   border-radius: 50%;
   background: transparent;
   border: transparent;
+  align-self: center;
 }
 #searchBox {
-  height: 1%;
-  margin-bottom: 1%;
+  margin-left: 2%;
+  border-radius: 20%;
+  background: var(--alice-blue);
+  height: 2.5rem;
+  border: 1px solid var(--umber);
+  box-shadow: none;
+  border-radius: 2rem;
+  width: 20%;
+  text-align: center;
 }
