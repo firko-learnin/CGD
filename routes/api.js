@@ -1,5 +1,5 @@
 import express from "express";
-import readTable from "../db/scripts/recipes/readTable.js";
+import readTable from "../models/readTable.js";
 import query from "../db/connection.js";
 const router = express.Router();
 
@@ -69,6 +69,48 @@ router.get("/roasters/", async function (req, res, next) {
     });
   }
 });
+
+/* POST new recipe. */
+router.post("/submit", async function (req, res, next) {
+  const username = req.body.username;
+  const roaster = req.body.roaster;
+  const beantitle = req.body.beantitle;
+  const drink = req.body.drink;
+  const machines = req.body.machines;
+  const grinder = req.body.grinder;
+  const grindsetting = req.body.grindsetting;
+  const preinfusiontime = req.body.preinfusiontime;
+  const extractiontime = req.body.extractiontime;
+  const tastingnotes = req.body.tastingnotes;
+  const response = await query(
+    "INSERT INTO recipes (username, roaster, beantitle, drink, machines, grinder, grindsetting, preinfusiontime, extractiontime, tastingnotes) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
+    [
+      username,
+      roaster,
+      beantitle,
+      drink,
+      machines,
+      grinder,
+      grindsetting,
+      preinfusiontime,
+      extractiontime,
+      tastingnotes,
+    ]
+  );
+  if (response) {
+    res.redirect("/");
+  } else {
+    res.json({
+      success: false,
+      message: "Posting recipe failed ☹️",
+    });
+  }
+});
+
+router.get("/submit", async function (req, res, next) {
+  app.use(express.static(path.join(__dirname, "public")));
+});
+
 // Test adding data to the table - ok
 // router.get("/test", async function (req, res, next) {
 //   let result = await query(

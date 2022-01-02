@@ -33,7 +33,7 @@
     </div>
     <div class="newRecipe">
       <p>Create a new coffee recipe:</p>
-      <form action="">
+      <form action="/api/submit" method="POST">
         <label for="username">Username:</label><br />
         <input
           type="text"
@@ -50,12 +50,12 @@
           name="roaster"
           value=""
         /><br />
-        <label for="beanTitle">Bean Title:</label><br />
+        <label for="beantitle">Bean Title:</label><br />
         <input
           type="text"
           required
-          id="beanTitle"
-          name="beanTitle"
+          id="beantitle"
+          name="beantitle"
           value=""
         /><br />
         <label for="drink">Drink:</label><br />
@@ -64,12 +64,12 @@
           <option value="Filter">Filter</option>
         </select>
         <br />
-        <label for="machine">Machine:</label><br />
+        <label for="machines">Machine:</label><br />
         <input
           type="text"
           required
-          id="machine"
-          name="machine"
+          id="machines"
+          name="machines"
           value=""
         /><br />
         <label for="grinder">Grinder:</label><br />
@@ -80,34 +80,34 @@
           name="grinder"
           value=""
         /><br />
-        <label for="grindSetting">Grind Setting:</label><br />
+        <label for="grindsetting">Grind Setting:</label><br />
         <input
           type="number"
           step=".1"
-          id="grindSetting"
-          name="grindSetting"
+          id="grindsetting"
+          name="grindsetting"
           required
           value=""
         /><br />
-        <label for="preinfusion">Pre-infusion Time (s):</label><br />
+        <label for="preinfusiontime">Pre-infusion Time (s):</label><br />
         <input
           type="number"
-          id="preinfusion"
-          name="preinfusion"
+          id="preinfusiontime"
+          name="preinfusiontime"
           required
           value=""
         /><br />
-        <label for="extraction">Extraction Time (s):</label><br />
+        <label for="extractiontime">Extraction Time (s):</label><br />
         <input
           type="number"
           required
-          id="extraction"
-          name="extraction"
+          id="extractiontime"
+          name="extractiontime"
           value=""
         /><br />
-        <label for="notes">Tasting Notes:</label><br />
+        <label for="tastingnotes">Tasting Notes:</label><br />
         <textarea
-          name="notes"
+          name="tastingnotes"
           id=""
           cols="40"
           rows="8"
@@ -115,11 +115,14 @@
           maxlength="200"
         ></textarea
         ><br />
-        <input type="submit" value="submit" />
+        <input
+          type="submit"
+          name="submit"
+          id="submitButton"
+          value="Submit recipe"
+        />
       </form>
     </div>
-    <table id="grinderTable"></table>
-
     <nav class="navbar">
       <div class="navbar--links">
         <a href="./index.html"
@@ -130,7 +133,7 @@
             src="./images/coffee-grinder-svgrepo-com.svg"
             alt="coffee grinders"
         /></a>
-        <a href="#newrecipe">
+        <a href="./newRecipe.html">
           <img
             id="newrecipe"
             src="./images/addRecipe-active.svg"
@@ -145,6 +148,5 @@
         >
       </div>
     </nav>
-    <script src="./js/grinders.js"></script>
   </body>
 </html>

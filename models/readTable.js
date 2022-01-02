@@ -1,4 +1,4 @@
-import query from "../../connection.js";
+import query from "../db/connection.js";
 
 async function readTable() {
   const data = await query("SELECT * from recipes");

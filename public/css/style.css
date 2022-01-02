@@ -203,3 +203,6 @@ input:invalid {
 input:valid {
   border: 1px solid var(--rich-black-fogra-29);
 }
+h2 {
+  text-align: center;
+}
