@@ -15,6 +15,24 @@ router.get("/", async function (req, res, next) {
     });
   }
 });
+
+/* GET recipes by grinder. */
+router.get("/grinders/", async function (req, res, next) {
+  const input = "%" + req.query.q + "%";
+  console.log(input);
+  const response = await query(
+    "SELECT * from recipes WHERE grinder ILIKE ($1)",
+    [input]
+  );
+  if (response) {
+    res.json({ success: true, payload: response });
+  } else {
+    res.json({
+      success: false,
+      message: "I wish we had some information to give you ☹️",
+    });
+  }
+});
 // Test adding data to the table - ok
 // router.get("/test", async function (req, res, next) {
 //   let result = await query(

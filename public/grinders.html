@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>CGD - Coffee Grind Databse</title>
+    <title>CGD - Coffee Grind Database</title>
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
@@ -25,51 +25,21 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div class="top">
-      <img
-        id="logo"
-        src="./images/adi-goldstein-xKS-1DP4g7A-unsplash.jpg"
-        alt="a cup of espresso"
-      />
+      <img id="logo" src="./images/grinders.jpg" alt="coffee grinder" />
       <h1>Coffee Grind Database</h1>
       <div></div>
     </div>
-    <p>Welcome to the future of espresso 🔮</p>
-    <table id="allApiData">
-      <th>Username</th>
-      <th>Drink</th>
-      <th>Grinder</th>
-      <th>Grind Setting</th>
-      <th>Pre-infusion Time (s)</th>
-      <th>Extraction Time (s)</th>
-      <th>Tasting Notes</th>
-      <th>Roaster</th>
-      <th>Bean Title</th>
-    </table>
-    <div class="links">
-      <div>
-        <a href="#grinders">
-          <h2>Grinders</h2>
-          <img src="./images/grinders.jpg" alt="coffee grinder" />
-        </a>
-        <a href="#newrecipe">
-          <h2>New Recipe</h2>
-          <img src="./images/menu.jpg" alt="coffee menu" />
-        </a>
-      </div>
-      <div>
-        <a href="#machines">
-          <h2>Machines</h2>
-          <img src="./images/machines.jpg" alt="espresso machine" />
-        </a>
-        <a href="#roasters">
-          <h2>Roasters</h2>
-          <img src="./images/roasters.jpg" alt="coffee roasting machine" />
-        </a>
-      </div>
+    <p>Search recipes by grinder:</p>
+    <div id="searchArea">
+      <input type="text" id="searchBox" />
+      <button id="searchButton">
+        <span class="material-icons-outlined"> search </span>
+      </button>
     </div>
+    <table id="grinderTable"></table>
+
     <nav class="navbar">
       <div class="navbar--links">
         <a href="#home" id="active"
@@ -95,6 +65,6 @@
         >
       </div>
     </nav>
-    <script src="./js/main.js"></script>
+    <script src="./js/grinders.js"></script>
   </body>
 </html>
