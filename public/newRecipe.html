@@ -25,54 +25,104 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div class="top">
-      <img
-        id="logo"
-        src="./images/adi-goldstein-xKS-1DP4g7A-unsplash.jpg"
-        alt="a cup of espresso"
-      />
+      <img id="logo" src="./images/grinders.jpg" alt="coffee grinder" />
       <h1>Coffee Grind Database</h1>
       <div></div>
     </div>
-    <p>Welcome to the future of espresso 🔮</p>
-    <table id="allApiData">
-      <th>Username</th>
-      <th>Drink</th>
-      <th>Grinder</th>
-      <th>Grind Setting</th>
-      <th>Pre-infusion Time (s)</th>
-      <th>Extraction Time (s)</th>
-      <th>Tasting Notes</th>
-      <th>Roaster</th>
-      <th>Bean Title</th>
-    </table>
-    <div class="links">
-      <div>
-        <a href="#grinders">
-          <h2>Grinders</h2>
-          <img src="./images/grinders.jpg" alt="coffee grinder" />
-        </a>
-        <a href="#newrecipe">
-          <h2>New Recipe</h2>
-          <img src="./images/menu.jpg" alt="coffee menu" />
-        </a>
-      </div>
-      <div>
-        <a href="#machines">
-          <h2>Machines</h2>
-          <img src="./images/machines.jpg" alt="espresso machine" />
-        </a>
-        <a href="#roasters">
-          <h2>Roasters</h2>
-          <img src="./images/roasters.jpg" alt="coffee roasting machine" />
-        </a>
-      </div>
+    <div class="newRecipe">
+      <p>Create a new coffee recipe:</p>
+      <form action="">
+        <label for="username">Username:</label><br />
+        <input
+          type="text"
+          required
+          id="username"
+          name="username"
+          value=""
+        /><br />
+        <label for="roaster">Roaster:</label><br />
+        <input
+          type="text"
+          required
+          id="roaster"
+          name="roaster"
+          value=""
+        /><br />
+        <label for="beanTitle">Bean Title:</label><br />
+        <input
+          type="text"
+          required
+          id="beanTitle"
+          name="beanTitle"
+          value=""
+        /><br />
+        <label for="drink">Drink:</label><br />
+        <select id="drink" required name="drink">
+          <option value="Espresso">Espresso</option>
+          <option value="Filter">Filter</option>
+        </select>
+        <br />
+        <label for="machine">Machine:</label><br />
+        <input
+          type="text"
+          required
+          id="machine"
+          name="machine"
+          value=""
+        /><br />
+        <label for="grinder">Grinder:</label><br />
+        <input
+          type="text"
+          required
+          id="grinder"
+          name="grinder"
+          value=""
+        /><br />
+        <label for="grindSetting">Grind Setting:</label><br />
+        <input
+          type="number"
+          step=".1"
+          id="grindSetting"
+          name="grindSetting"
+          required
+          value=""
+        /><br />
+        <label for="preinfusion">Pre-infusion Time (s):</label><br />
+        <input
+          type="number"
+          id="preinfusion"
+          name="preinfusion"
+          required
+          value=""
+        /><br />
+        <label for="extraction">Extraction Time (s):</label><br />
+        <input
+          type="number"
+          required
+          id="extraction"
+          name="extraction"
+          value=""
+        /><br />
+        <label for="notes">Tasting Notes:</label><br />
+        <textarea
+          name="notes"
+          id=""
+          cols="40"
+          rows="8"
+          minlength="5"
+          maxlength="200"
+        ></textarea
+        ><br />
+        <input type="submit" value="submit" />
+      </form>
     </div>
+    <table id="grinderTable"></table>
+
     <nav class="navbar">
       <div class="navbar--links">
-        <a href="./index.html" id="active"
+        <a href="./index.html"
           ><span class="material-icons-outlined"> cottage </span></a
         >
         <a href="./grinders.html">
@@ -83,18 +133,18 @@
         <a href="#newrecipe">
           <img
             id="newrecipe"
-            src="./images/addRecipe.svg"
+            src="./images/addRecipe-active.svg"
             alt="add recipe button"
           />
         </a>
-        <a href="#machines">
+        <a href="./machines.html">
           <span class="material-icons-outlined"> coffee_maker </span></a
         >
-        <a href="#roasters"
+        <a href="./roasters.html"
           ><span class="material-icons-outlined"> storefront </span></a
         >
       </div>
     </nav>
-    <script src="./js/main.js"></script>
+    <script src="./js/grinders.js"></script>
   </body>
 </html>
