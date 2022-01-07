@@ -1,5 +1,5 @@
 //Set url to current site
-const url = "";
+const url = window.location.origin;
 //Assign table to a variable
 const grindData = document.getElementById("grinderTable");
 const searchArea = document.getElementById("searchArea");

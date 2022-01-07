@@ -1,5 +1,5 @@
 //Set url to current site
-const url = "";
+const url = window.location.origin;
 const managementLink = document.getElementById("logo");
 managementLink.addEventListener("click", handleClick);
 
