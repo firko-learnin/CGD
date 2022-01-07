@@ -10,6 +10,8 @@ Current functionality:
 * Search by machine/grinder/roaster
 * Delete recipes
 
+Hosted on Heroku: https://coffeegrinddatabase.herokuapp.com/
+
 ## To do:
 
 * Add the ability to update recipes in the database
