@@ -1,27 +1,42 @@
 import React from "react";
 import grinderIcon from "../../images/coffee-grinder-svgrepo-com.svg";
+import activeGrinderIcon from "../../images/grinder-active.svg";
 import newRecipeIcon from "../../images/addRecipe.svg";
-import { Link } from "react-router-dom";
+import activeNewRecipeIcon from "../../images/addRecipe-active.svg";
+import { NavLink } from "react-router-dom";
 
-export default function TitleBar() {
+export default function Navbar({ URL }) {
+  console.log(URL);
   return (
     <nav className="navbar">
       <div className="navbar--links">
-        <Link to="/" id="active">
-          <span className="material-icons-outlined"> cottage </span>
-        </Link>
-        <Link to="/grinders">
-          <img src={grinderIcon} alt="coffee grinders" />
-        </Link>
-        <Link to="/newRecipe">
-          <img id="newrecipe" src={newRecipeIcon} alt="add recipe button" />
-        </Link>
-        <Link to="/machines">
+        <NavLink activeClassName="active" to="/">
+          <span className={"material-icons-outlined"}>cottage</span>
+        </NavLink>
+        <NavLink activeClassName="active" to="/grinders">
+          {URL === "/grinders" ? (
+            <img src={activeGrinderIcon} alt="coffee grinders" />
+          ) : (
+            <img src={grinderIcon} alt="coffee grinders" />
+          )}
+        </NavLink>
+        <NavLink activeClassName="active" to="/newRecipe">
+          {URL === "/newRecipe" ? (
+            <img
+              id="newrecipe"
+              src={activeNewRecipeIcon}
+              alt="add recipe button"
+            />
+          ) : (
+            <img id="newrecipe" src={newRecipeIcon} alt="add recipe button" />
+          )}
+        </NavLink>
+        <NavLink activeClassName="active" to="/machines">
           <span className="material-icons-outlined"> coffee_maker </span>
-        </Link>
-        <Link to="/roasters">
+        </NavLink>
+        <NavLink activeClassName="active" to="/roasters">
           <span className="material-icons-outlined"> storefront </span>
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
