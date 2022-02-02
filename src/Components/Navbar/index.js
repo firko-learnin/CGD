@@ -10,17 +10,17 @@ export default function Navbar({ URL }) {
   return (
     <nav className="navbar">
       <div className="navbar--links">
-        <NavLink activeClassName="active" to="/">
+        <NavLink activeclassname="active" to="/">
           <span className={"material-icons-outlined"}>cottage</span>
         </NavLink>
-        <NavLink activeClassName="active" to="/grinders">
+        <NavLink activeclassname="active" to="/grinders">
           {URL === "/grinders" ? (
             <img src={activeGrinderIcon} alt="coffee grinders" />
           ) : (
             <img src={grinderIcon} alt="coffee grinders" />
           )}
         </NavLink>
-        <NavLink activeClassName="active" to="/newRecipe">
+        <NavLink activeclassname="active" to="/newRecipe">
           {URL === "/newRecipe" ? (
             <img
               id="newrecipe"
@@ -31,10 +31,10 @@ export default function Navbar({ URL }) {
             <img id="newrecipe" src={newRecipeIcon} alt="add recipe button" />
           )}
         </NavLink>
-        <NavLink activeClassName="active" to="/machines">
+        <NavLink activeclassname="active" to="/machines">
           <span className="material-icons-outlined"> coffee_maker </span>
         </NavLink>
-        <NavLink activeClassName="active" to="/roasters">
+        <NavLink activeclassname="active" to="/roasters">
           <span className="material-icons-outlined"> storefront </span>
         </NavLink>
       </div>
