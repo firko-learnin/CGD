@@ -4,9 +4,22 @@ import ResultTable from "../ResultTable";
 
 export default function Management() {
   const URL = process.env.REACT_APP_URL;
-  console.log(URL);
 
   const [tableData, setTableData] = useState([]);
+
+  const tableHeaders = [
+    "Username",
+    "Roaster",
+    "Bean Title",
+    "Drink",
+    "Machine",
+    "Grinder",
+    "Grind Setting",
+    "Pre-infusion Time (s)",
+    "Extraction Time (s)",
+    "Tasting Notes",
+    "Delete",
+  ];
 
   console.log("management render");
 
@@ -33,7 +46,11 @@ export default function Management() {
         <p>All data:</p>
       </div>
       <div></div>
-      {/* <ResultTable></ResultTable> */}
+      <ResultTable
+        setTableData={setTableData}
+        tableHeaders={tableHeaders}
+        tableData={tableData}
+      ></ResultTable>
     </>
   );
 }
