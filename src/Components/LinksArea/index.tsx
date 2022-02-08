@@ -1,15 +1,8 @@
-import React from "react";
 import grinder from "../../images/grinders.jpg";
 import menu from "../../images/menu.jpg";
 import machine from "../../images/machines.jpg";
 import roaster from "../../images/roasters.jpg";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function LinksArea() {
   return (

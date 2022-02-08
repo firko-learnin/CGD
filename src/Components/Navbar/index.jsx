@@ -6,7 +6,6 @@ import activeNewRecipeIcon from "../../images/addRecipe-active.svg";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar({ URL }) {
-  console.log(URL);
   return (
     <nav className="navbar">
       <div className="navbar--links">

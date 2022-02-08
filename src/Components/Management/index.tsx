@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import { useEffect } from "react";
+import { useState } from "react";
 import ResultTable from "../ResultTable";
+import { TableData } from "../../Types/types";
 
+const URL = process.env.REACT_APP_URL;
 export default function Management() {
-  const URL = process.env.REACT_APP_URL;
-
-  const [tableData, setTableData] = useState([]);
+  const [tableData, setTableData] = useState<TableData[]>([]);
 
   const tableHeaders = [
     "Username",
@@ -33,11 +33,9 @@ export default function Management() {
       const res = await req.json();
       //Extract payload from response
       //Loop through the data in the response and populate the table accordingly
-      console.log(res.payload.rows);
       setTableData(res.payload.rows);
     };
     getData();
-    return tableData;
   }, []);
 
   return (

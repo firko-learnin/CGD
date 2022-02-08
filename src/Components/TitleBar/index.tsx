@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../images/adi-goldstein-xKS-1DP4g7A-unsplash.jpg";
 import { NavLink } from "react-router-dom";
 

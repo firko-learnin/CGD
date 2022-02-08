@@ -1,24 +1,28 @@
-import React from "react";
+import { TableData } from "../../Types/types";
 
-export default function ResultTable({ tableHeaders, tableData, setTableData }) {
+type ResultTableProps = {
+  tableHeaders: string[];
+  tableData: TableData[];
+  setTableData: (newData: TableData[]) => void;
+};
+
+export default function ResultTable({
+  tableHeaders,
+  tableData,
+  setTableData,
+}: ResultTableProps) {
   const URL = process.env.REACT_APP_URL;
-  async function deleteFunction(item) {
-    const index = tableData.findIndex((row) => row.id === item.id);
+  async function deleteFunction(item: TableData) {
     const response = await fetch(`${URL}/${item.id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     });
-    let data = await response.json();
     alert("Successfully deleted id " + item.id);
-    const newTable = [
-      ...tableData.slice(0, index),
-      ...tableData.slice(index + 1),
-    ];
+    const newTable = tableData.filter((tableRow) => tableRow.id !== item.id);
     //Optimistic state update
+    // @ts-ignore
     setTableData(newTable);
-    return data;
   }
-  console.log(tableData);
   return (
     <>
       <table>

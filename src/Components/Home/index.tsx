@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import LinksArea from "../LinksArea";
 
 export default function Home() {
