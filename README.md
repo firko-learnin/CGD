@@ -2,7 +2,7 @@
 
 ## Update:
 
-I am currently rewriting this app in React after originally making it with vanilla JS.
+I am currently rewriting this app in React with TypeScript after originally making it with vanilla JS.
 
 ## Info:
 
