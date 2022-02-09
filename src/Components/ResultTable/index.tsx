@@ -11,6 +11,7 @@ export default function ResultTable({
   tableData,
   setTableData,
 }: ResultTableProps) {
+  console.log(tableHeaders);
   const URL = process.env.REACT_APP_URL;
   async function deleteFunction(item: TableData) {
     const response = await fetch(`${URL}/${item.id}`, {
@@ -20,7 +21,6 @@ export default function ResultTable({
     alert("Successfully deleted id " + item.id);
     const newTable = tableData.filter((tableRow) => tableRow.id !== item.id);
     //Optimistic state update
-    // @ts-ignore
     setTableData(newTable);
   }
   return (
@@ -45,16 +45,18 @@ export default function ResultTable({
                 <td>{data.preinfusiontime}</td>
                 <td>{data.extractiontime}</td>
                 <td>{data.tastingnotes}</td>
-                <td>
-                  <button onClick={(e) => deleteFunction(data)}>
-                    <span
-                      className="material-icons-outlined"
-                      style={{ color: "red" }}
-                    >
-                      remove_circle_outline
-                    </span>
-                  </button>
-                </td>
+                {tableHeaders.includes("Delete") ? (
+                  <td>
+                    <button onClick={(e) => deleteFunction(data)}>
+                      <span
+                        className="material-icons-outlined"
+                        style={{ color: "red" }}
+                      >
+                        remove_circle_outline
+                      </span>
+                    </button>
+                  </td>
+                ) : null}
               </tr>
             );
           })}

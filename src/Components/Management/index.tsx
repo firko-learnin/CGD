@@ -1,25 +1,13 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ResultTable from "../ResultTable";
 import { TableData } from "../../Types/types";
+import * as CONSTS from "../../Constants/constants";
 
 const URL = process.env.REACT_APP_URL;
+const tableHeaders = [...CONSTS.tableHeaders, "Delete"];
+
 export default function Management() {
   const [tableData, setTableData] = useState<TableData[]>([]);
-
-  const tableHeaders = [
-    "Username",
-    "Roaster",
-    "Bean Title",
-    "Drink",
-    "Machine",
-    "Grinder",
-    "Grind Setting",
-    "Pre-infusion Time (s)",
-    "Extraction Time (s)",
-    "Tasting Notes",
-    "Delete",
-  ];
 
   console.log("management render");
 
