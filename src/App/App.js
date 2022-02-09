@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "../Components/Home";
 import Navbar from "../Components/Navbar";
 import TitleBar from "../Components/TitleBar";
-import Grinders from "../Grinders/Grinders.tsx";
+import Grinders from "../Components/Grinders/Grinders";
 import NewRecipe from "../Components/NewRecipe";
 import Machines from "../Components/Machines";
 import Roasters from "../Components/Roasters";
