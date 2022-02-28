@@ -22,39 +22,51 @@ export default function Navbar({ URL }) {
         <Link href="/grinders">
           {URL === "/grinders" ? (
             <a>
-              <Image
-                src={activeGrinderIcon}
-                alt="coffee grinder icon"
-                height="30px"
-              ></Image>
+              <div className="image-wrapper">
+                <Image
+                  src={activeGrinderIcon}
+                  alt="coffee grinder icon"
+                  height="32px"
+                  width="32px"
+                ></Image>
+              </div>
             </a>
           ) : (
             <a>
-              <Image
-                src={grinderIcon}
-                alt="coffee grinder icon"
-                height="30px"
-              ></Image>
+              <div className="image-wrapper">
+                <Image
+                  src={grinderIcon}
+                  alt="coffee grinder icon"
+                  height="32px"
+                  width="32px"
+                ></Image>
+              </div>
             </a>
           )}
         </Link>
         <Link href="/newRecipe">
           {URL === "/newRecipe" ? (
             <a className="active" style={{ display: "flex" }}>
-              <Image
-                src={activeNewRecipeIcon}
-                alt="new recipe button"
-                width="40px"
-              ></Image>
+              <div className="image-wrapper">
+                <Image
+                  src={activeNewRecipeIcon}
+                  alt="new recipe button"
+                  width="40px"
+                  height="40px"
+                ></Image>
+              </div>
             </a>
           ) : (
             <a style={{ display: "flex" }}>
-              <Image
-                src={activeNewRecipeIcon}
-                alt="new recipe button"
-                id="newrecipe"
-                width="40px"
-              ></Image>
+              <div className="image-wrapper">
+                <Image
+                  src={activeNewRecipeIcon}
+                  alt="new recipe button"
+                  id="newrecipe"
+                  width="40px"
+                  height="40px"
+                ></Image>
+              </div>
             </a>
           )}
         </Link>

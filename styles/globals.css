@@ -114,15 +114,17 @@ table td {
   justify-content: space-between;
   font-size: 1.5rem;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
+  height: 12rem;
 }
 #logo {
-  margin: 1vw;
-  height: 10rem;
-  border-radius: 50%;
+  margin: 1vw !important;
+  height: 10rem !important;
+  border-radius: 50% !important;
 }
 .top h1 {
   align-self: center;
+  margin-right: 20rem;
 }
 
 /* Homepage links */
@@ -211,4 +213,11 @@ input:valid {
 }
 h2 {
   text-align: center;
+}
+
+/*NextJS image wrapper */
+.image-wrapper {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
 }
