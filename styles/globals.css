@@ -129,22 +129,39 @@ table td {
 
 /* Homepage links */
 .links {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  text-align: center;
-  text-decoration: none;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". link1 link2"
+    ". link3 link4";
+  width: 80%;
   padding: 3rem;
+  margin: auto;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 20rem;
 }
 
 .links a {
+  margin: auto;
   color: var(--umber);
   font-size: 1.5rem;
 }
 
-.links img {
+@media (max-width: 550px) {
+  .links a {
+    font-size: 1rem;
+  }
+}
+
+.links-img {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
