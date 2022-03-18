@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ResultTable from "../ResultTable";
 import { tableHeaders } from "../../Constants/constants";
 import { TableData } from "../../Types/types";
-const URL = process.env.REACT_APP_URL;
+const URL = process.env.NEXT_PUBLIC_URL;
 
 export default function Machines() {
   const [tableData, setTableData] = useState<TableData[]>([]);

@@ -7,7 +7,7 @@ export default function TitleBar() {
   return (
     <div className="top">
       <Link href="/management">
-        <a>
+        <a className="topLeft">
           <div className="image-wrapper">
             <Image
               src={logo}
@@ -17,8 +17,8 @@ export default function TitleBar() {
           </div>
         </a>
       </Link>
-      <h1>Coffee Grind Database</h1>
-      <div></div>
+      <h1 className="topMiddle">Coffee Grind Database</h1>
+      <div className="topRight"></div>
     </div>
   );
 }

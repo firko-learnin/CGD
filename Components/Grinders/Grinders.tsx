@@ -2,12 +2,12 @@ import { useState } from "react";
 import ResultTable from "../ResultTable";
 import { tableHeaders } from "../../Constants/constants";
 import { TableData } from "../../Types/types";
-const URL = process.env.REACT_APP_URL;
+const URL = process.env.NEXT_PUBLIC_URL;
 
 export default function Grinders() {
   const [tableData, setTableData] = useState<TableData[]>([]);
   const [userInput, setUserInput] = useState("");
-  console.log(tableData);
+  console.log(userInput);
 
   // Handle change function to track user input
   function handleChange(input: string) {
@@ -16,6 +16,7 @@ export default function Grinders() {
 
   //   Function to get all data from the database
   async function getData(e: React.FormEvent) {
+    e.preventDefault();
     const req = await fetch(`${URL}/grinders?q=${userInput}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },

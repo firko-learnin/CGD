@@ -12,7 +12,7 @@ export default function ResultTable({
   setTableData,
 }: ResultTableProps) {
   console.log(tableHeaders);
-  const URL = process.env.REACT_APP_URL;
+  const URL = process.env.NEXT_PUBLIC_URL;
   async function deleteFunction(item: TableData) {
     const response = await fetch(`${URL}/${item.id}`, {
       method: "DELETE",

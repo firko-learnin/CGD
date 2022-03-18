@@ -3,7 +3,7 @@ import ResultTable from "../ResultTable";
 import { TableData } from "../../Types/types";
 import * as CONSTS from "../../Constants/constants";
 
-const URL = process.env.REACT_APP_URL;
+const URL = process.env.NEXT_PUBLIC_URL;
 const tableHeaders = [...CONSTS.tableHeaders, "Delete"];
 
 export default function Management() {
