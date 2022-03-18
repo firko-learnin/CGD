@@ -1,4 +1,5 @@
 import { TableData } from "../../Types/types";
+import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 
 type ResultTableProps = {
   tableHeaders: string[];
@@ -48,12 +49,9 @@ export default function ResultTable({
                 {tableHeaders.includes("Delete") ? (
                   <td>
                     <button onClick={(e) => deleteFunction(data)}>
-                      <span
-                        className="material-icons-outlined"
-                        style={{ color: "red" }}
-                      >
-                        remove_circle_outline
-                      </span>
+                      <RemoveCircleOutlineOutlinedIcon
+                        style={{ fill: "red" }}
+                      ></RemoveCircleOutlineOutlinedIcon>
                     </button>
                   </td>
                 ) : null}

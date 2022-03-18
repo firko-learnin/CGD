@@ -14,7 +14,7 @@ export default function Management() {
   //   Function to get all data from the database
   useEffect(() => {
     const getData = async () => {
-      const req = await fetch(`${URL}/`, {
+      const req = await fetch(`${URL}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
